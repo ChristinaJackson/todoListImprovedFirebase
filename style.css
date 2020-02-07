@@ -51,6 +51,8 @@ body{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    align-items: center;
+    border: solid yellow 2px;
     /* margin: 10px; */
   }
   #todo-list button{
@@ -65,7 +67,8 @@ body{
   #todo-list li{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    width: 50%;
     align-items: center;
     border: solid blue 1px;
   }
