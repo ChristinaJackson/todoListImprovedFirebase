@@ -1,23 +1,14 @@
-* {
-  box-sizing: border-box;
-}
 body{
     font-family: helvetical, Arial, sans-serif;
     background-color: #29568C;
     color: #255792;
-  }
-  
-button {
-  background-color: #255792;
-  border: solid 1px #255792;
-  border-radius: 3px;
-  padding: 3px;
-  color:#F6F3F7;
-  /* font-weight: bold; */
-  margin: 2px;
 }
+ul, li{
+  list-style: none;
+}  
 #todo-list-body{
   background-color: #F6F3F7;
+  /* background-color: #796D9C; */
   border: solid black 1px;
   padding-top: 0px;
   width: 70vw;
@@ -34,6 +25,7 @@ button {
 }
 #addTodoTextInput{
   width: 50%;
+  margin-right: 0.5rem;
 }
 .add-todo-group{
   display: flex;
@@ -43,52 +35,63 @@ button {
   margin: auto;
   margin-bottom: 20px;
 }
-ul, li{
-  list-style: none;
-}
 #todo-list{
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 1rem;
+  margin: 1rem;
   align-items: center;
-  /* border: solid yellow 2px; */
-  /* margin: 10px; */
-}
-#todo-list button{
-    /* background-color: #255792; */
-  border: solid 1px #255792;
-  margin-right: 0px;
-}
-.deleteButton {
-  background-color: #f44336;
-  border: none;
+  /* background-color: #F6F3F7; */
 }
 #todo-list li{
   display:flex;
   flex-direction: row;
+  justify-content: flex-start;
   min-height: 50px;
-  /* justify-content: space-between; */
   width: 100%;
   align-items: center;
-  /* border: solid blue 1px; */
+  border-bottom: solid 1px #29568C;
 }
-#todo-list li :nth-child(2){
-     /* border: solid black 3px; */
-    margin: 10px;
-    width: 70%;
-   }
-
-#todo-list li :last-child {
-  margin-right: 5px;
+/* #todo-list p{
+  border: solid black 2px;
+  margin: 0 10px;
+} */
+/* -------button styling----- */
+button {
+  background-color: #255792;
+  /* border: solid 1px #255792; */
+  border-radius: 3px;
+  border: solid black 1px;
+  padding: 3px;
+  color:#F6F3F7;
+  /* font-weight: bold; */
+  margin: 2px;
 }
-
 .editButton{
   padding: 3px 10px;
 }
 .saveButton{
+  background-color: #52ae76;
+  color: black;
   padding: 3px 7.5px;
 }
-  
+.deleteButton {
+  background-color: #f44336;
+}
+/* selects input element in edit state */
+#todo-list li :nth-child(2){
+    margin: 0px;
+    width: 90%;
+}
+
+#todo-list input.tempInput{
+  margin-left: -1.3rem;
+}
+/* selects delete button in li */
+#todo-list li :last-child {
+  justify-self: flex-end;
+}
+
   /* -------accessibility------- */
 .visually-hidden{
   border: 0;

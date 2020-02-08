@@ -128,6 +128,7 @@ let todoList = {
       editToSaveButton.className = 'saveButton';
       let tempInput = document.createElement('input');
       tempInput.type = "text";
+      tempInput.className = 'tempInput'
       //puts the previous input in the input element for edit state
       tempInput.value = pElement.textContent;
       liElement.insertBefore(tempInput, pElement);
