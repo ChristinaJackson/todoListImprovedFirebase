@@ -131,16 +131,18 @@ let todoList = {
       //puts the previous input in the input element for edit state
       tempInput.value = pElement.textContent;
       liElement.insertBefore(tempInput, pElement);
-      //temp remove checkbox while in edit state and old todo text
-      liElement.removeChild(checkboxElement);
+      //temp remove or hide checkbox while in edit state and old todo text
+      // liElement.removeChild(checkboxElement);
+      // console.log(liElement.children)
+      checkboxElement.style.visibility = 'hidden';
       liElement.removeChild(pElement);
     },
     saveTodo: function(position){
       let liElement = document.getElementById(position);
       //gets new todo value
-      let todoText = liElement.children[0].value;
+      let todoText = liElement.children[1].value;
       //selecting and removing the input from edit state back to todo state
-      let tempInput = liElement.children[0];
+      let tempInput = liElement.children[1];
       liElement.removeChild(tempInput);
       //add new todo back to list
       todoList.changeTodo(position,todoText);
