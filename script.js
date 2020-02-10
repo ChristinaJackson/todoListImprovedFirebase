@@ -164,6 +164,10 @@ let todoList = {
       let checkBox = document.createElement('input');
       checkBox.type = 'checkbox';
       checkBox.className = 'checkBox';
+      let checkBoxLabel = document.createElement('label');
+      checkBoxLabel.textContent = 'Todo finished';
+      checkBoxLabel.className = 'visually-hidden';
+      checkBox.appendChild(checkBoxLabel);
       return checkBox;
     },
     //-------------event delegation-----------//
