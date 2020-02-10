@@ -4,10 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>ToDo List</title>
+<link href="https://fonts.googleapis.com/css?family=Neucha|Open+Sans&display=swap" rel="stylesheet"> 
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+  
+      <div id="holes">
+ 
+
+    <div class = "hole hole1" >
+      <div class="innerHole"> </div>
+    </div>
+  
+<div class = "hole hole1" >
+  <div class="innerHole"></div>
+    
+  </div>
+<div class = "hole hole1" >
+  <div class="innerHole"></div>
+  </div>
+</div>
     <div id='todo-list-body'>
+    <div id='todoTopper'>
     <h1>To-do List</h1>
     <!-- added form for access and invis label for the todo input -->
     <form class = 'add-todo-group'id ="todoInputForm">
@@ -16,6 +34,7 @@
       <button type="submit">Add</button>
       <button onclick='handlers.toggleAll()'>Toggle All</button>
     </form>
+    </div>
     <!-- <div class='empty-state'>
       <p>oh hello, </p>
     </div> -->
@@ -42,5 +61,6 @@
    </ul>
     </div>
     <script src="script.js"></script>
+
   </body>
 </html>
