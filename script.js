@@ -97,6 +97,14 @@ let todoList = {
         let todoP = document.createElement('p');
         let todoTextWithCompletion = "";
         let todoCheckbox = view.createCheckBox();
+
+        //labeling the checkbox NOT DONE - NOT working fully
+        let checkBoxLabel = document.createElement('label')
+        checkBoxLabel.textContent = 'Todo item';
+        checkBoxLabel.className = 'visually-hidden';
+        todoCheckbox.appendChild(checkBoxLabel)
+        checkBoxLabel.htmlFor = `item: ${todo.todoText}`
+        
         if(todo.completed === true){
           todoTextWithCompletion = todo.todoText;
           todoCheckbox.checked = true;
@@ -117,10 +125,11 @@ let todoList = {
       });
     },
     changeTodo: function(position){
-      //selects element of the node list
+      //selecting elements of the node list
       let liElement = document.getElementById(position);
       let checkboxElement = liElement.children[0];
       let pElement = liElement.children[1];
+      
       //changes edit button to save button
       let editToSaveButton = liElement.children[2]
       editToSaveButton.textContent = 'Save';
@@ -132,9 +141,7 @@ let todoList = {
       //puts the previous input in the input element for edit state
       tempInput.value = pElement.textContent;
       liElement.insertBefore(tempInput, pElement);
-      //temp remove or hide checkbox while in edit state and old todo text
-      // liElement.removeChild(checkboxElement);
-      // console.log(liElement.children)
+      //temp hide checkbox while in edit state and old todo text
       checkboxElement.style.visibility = 'hidden';
       liElement.removeChild(pElement);
     },
@@ -164,12 +171,9 @@ let todoList = {
       let checkBox = document.createElement('input');
       checkBox.type = 'checkbox';
       checkBox.className = 'checkBox';
-      let checkBoxLabel = document.createElement('label');
-      checkBoxLabel.textContent = 'Todo finished';
-      checkBoxLabel.className = 'visually-hidden';
-      checkBox.appendChild(checkBoxLabel);
       return checkBox;
     },
+
     //-------------event delegation-----------//
     setUpEventListeners: function(){
       // listener on the ul element for all buttons/events
