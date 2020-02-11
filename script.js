@@ -10,7 +10,7 @@
 //(X)click item to toggle vs selecting index num
 //(X)edit button vs the change todo feature
 //(X) save button adds todo to the list
-//()make it pretty  
+//(X)make it pretty  
 //  -- set the todos to = sizes, text wrapping for input
 //()make it responsive
 //()make it accessible --> 
@@ -133,7 +133,6 @@ let todoList = {
       //changes edit button to save button
       let editToSaveButton = liElement.children[2]
       editToSaveButton.textContent = 'Save';
-      editToSaveButton.type = 'submit';
       editToSaveButton.className = 'saveButton';
       let tempInput = document.createElement('input');
       tempInput.type = "text";

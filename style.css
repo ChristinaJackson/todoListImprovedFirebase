@@ -1,10 +1,8 @@
 body{
-  margin: 0;
-  margin-left: 3rem;
-  margin-top: 25px;
+  margin: 25px 0 0 50px;
   padding: 0;
   font-family: "Open Sans",helvetical, sans-serif;
-  color: black;
+  color: #02071b;
 }
 ul, li{
   list-style: none;
@@ -13,7 +11,7 @@ ul, li{
   border: solid #ccc 1px;
   position: relative;
   z-index: 1;
-  background-image: repeating-linear-gradient(white 0px, white 24px,CornflowerBlue 25px);
+  background-image: repeating-linear-gradient(white 0px, white 24px,CornflowerBlue 26px);
   min-height: 95vh;
   min-width: 320px;
   max-width: 500px;
@@ -45,28 +43,23 @@ ul, li{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* border: solid pink 2px; */
   margin: auto;
 }
 #todo-list{
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin-top: 11px;
+  margin-top: 13px;
   padding-left: 5px;
   align-items: center;
-  /* border: solid green 2px; */
 }
 #todo-list li{
-  /* border: solid purple 1px; */
   display:flex;
   flex-direction: row;
-  min-height: 23px;
+  min-height: 24px;
   width: 100%;
   align-items: center;
-  margin-top: 2px;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin: 2px 1rem 0 1rem;
 }
 #todo-list:not(:last-child){
   border-bottom: none;
@@ -74,23 +67,28 @@ ul, li{
 
 /* -------button styling----- */
 button {
-  background-color: #203BF5;
+  /* background-color: #203BF5; */
+background-color: #194cf1;
   border-radius: 3px;
   border: solid black 1px;
   padding: 2px;
   color:#F6F3F7;
-  margin-right: 5px;
+  margin: 3px 5px 0 0;
+}
+button:active{
+  transform: translate(1px, 1px);
 }
 .editButton{
   padding: 2px 10px;
 }
 .saveButton{
-  background-color: #52ae76;
-  color: black;
+  background-color:#00a200;
+  margin-left: 5px;
   padding: 2px 7.5px;
 }
 .deleteButton {
-  background-color: red;
+  background-color: #f32308;
+  font-weight: bold;
 }
 /* selects input element in edit state */
 #todo-list li :nth-child(2){
