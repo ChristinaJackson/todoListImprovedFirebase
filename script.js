@@ -5,15 +5,16 @@
 //()Add an error message when no input and Add todo clicked?
 //(X)toggle all strike through AND checks checkbox
 // ----> checkboxes not showing checked because of displayTodos
-//(X)checkbox toggles complete..()and checks
+//(X)checkbox toggles complete.(X)and checks
 //(X)Pressing enter also submits todo
 //(X)click item to toggle vs selecting index num
 //(X)edit button vs the change todo feature
 //(X) save button adds todo to the list
 //(X)make it pretty  
 //  -- set the todos to = sizes, text wrapping for input
-//()make it responsive
-//()make it accessible --> 
+//(X)make it responsive
+//()make it accessible -->
+//(X) Checkboxes need <label>
 //  ()--(form added - need more accessible elements)
 //  ()--hidden element that tells you list is empty
 
