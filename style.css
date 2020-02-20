@@ -1,6 +1,4 @@
 body{
-  margin: 25px 0 0 50px;
-  padding: 0;
   font-family: "Open Sans",helvetical, sans-serif;
   color: #02071b;
 }
@@ -8,6 +6,7 @@ ul, li{
   list-style: none;
 }  
 #todo-list-body{
+  margin: auto;
   border: solid #ccc 1px;
   position: relative;
   z-index: 1;
@@ -20,7 +19,7 @@ ul, li{
 }
 #todo-list-body h1{
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0;
 }
 #todo-list-body::before{
   content: '';
