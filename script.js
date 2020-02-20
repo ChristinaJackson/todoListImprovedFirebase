@@ -186,6 +186,13 @@ let todoList = {
         e.preventDefault();
         handlers.addTodo();
       })
+
+      todoInputform.addEventListener('click', function(e){
+        if (e.target.className === 'toggleAll'){
+          handlers.toggleAll();
+      }
+      })
+
       todosUl.addEventListener('click', function(e){
       let elementClicked = e.target;
       //li element id to int, allows for specific selection of list item
@@ -203,6 +210,4 @@ let todoList = {
     }
   };
   view.setUpEventListeners();
-  
-  
   

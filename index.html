@@ -1,73 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>ToDo List</title>
-<link href="https://fonts.googleapis.com/css?family=Neucha|Open+Sans&display=swap" rel="stylesheet"> 
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <!-- <div id="holes">
-      <div class = "hole hole1" >
-        <div class="innerHole"> </div>
-    </div>
-    <div class = "hole hole1" >
-      <div class="innerHole"></div>
-   </div>
-    <div class = "hole hole1" >
-      <div class="innerHole"></div>
-  </div>
-</div> -->
 
-<div id='todo-list-body'>
-      <div id="holes">
-      <div class = "hole hole1" >
-        <div class="innerHole"> </div>
-    </div>
-    <div class = "hole hole1" >
-      <div class="innerHole"></div>
-   </div>
-    <div class = "hole hole1" >
-      <div class="innerHole"></div>
-  </div>
-</div>
-    <div id='todoTopper'>
-    <h1>To-do List</h1>
-    <!-- added form for access and invis label for the todo input -->
-    <form class = 'add-todo-group'id ="todoInputForm">
-      <label for='addTodoTextInput' class='visually-hidden'>Add a to-do item</label>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ToDo List</title>
+	<link href="https://fonts.googleapis.com/css?family=Neucha|Open+Sans&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id='todo-list-body'>
+		<div id="holes">
+			<div class="hole hole1">
+				<div class="innerHole"> </div>
+			</div>
+			<div class="hole hole1">
+				<div class="innerHole"></div>
+			</div>
+			<div class="hole hole1">
+				<div class="innerHole"></div>
+			</div>
+		</div>
+		<div id='todoTopper'>
+			<h1>To-do List</h1>
+			<!-- added form for access and invis label for the todo input -->
+			<form id="todoInputForm">
+				<label for='addTodoTextInput' class='visually-hidden'>Add a to-do item</label>
       <input type='text'id='addTodoTextInput' placeholder="Enter a todo" >
       <button type="submit">Add</button>
-      <button onclick='handlers.toggleAll()'>Toggle All</button>
+      <button class ='toggleAll'>Toggle All</button>
     </form>
     </div>
-    <!-- <div class='empty-state'>
-      <p>oh hello, </p>
-    </div> -->
+    <ul id='todo-list'>
+    </ul>
+  </div>
 
-   <ul id='todo-list'>
-     <!-- <li>
-       <input class='checkBox' type='checkbox'>
-       <p> Todo Item hardcoded</p>
-       <button class= 'editButton'>Edit</button>
-       <button class='deleteButton'>Delete</button>
-     </li>
-     <li>
-       <input class='checkBox' type='checkbox'>
-       <p> Todo Item hardcoded</p>
-       <button class= 'editButton'>Edit</button>
-       <button class='deleteButton'>Delete</button>
-     </li>
-     <li>
-       <input class='checkBox' type='checkbox'>
-       <p> Todo Item hardcoded</p>
-       <button class= 'editButton'>Edit</button>
-       <button class='deleteButton'>Delete</button>
-     </li> -->
-   </ul>
-    </div>
     <script src="script.js"></script>
-
   </body>
 </html>
