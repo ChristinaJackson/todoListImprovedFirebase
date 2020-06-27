@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login To-Do</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script>
+            var firebaseConfig = {
+            apiKey: "AIzaSyAVF46wp0uDh8l7uB2tWBAeJRBob0dudVc",
+            authDomain: "todolistimproved.firebaseapp.com",
+            databaseURL: "https://todolistimproved.firebaseio.com",
+            projectId: "todolistimproved",
+            storageBucket: "todolistimproved.appspot.com",
+            messagingSenderId: "722028871004",
+            appId: "1:722028871004:web:b276076b6694fe0d22d599",
+            measurementId: "G-58V0BMSNB1"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.0/firebase-ui-auth.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'index.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback function.
+        // Terms of service url/callback.
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: function() {
+          window.location.assign('<your-privacy-policy-url>');
+        }
+      };
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <h1 id='intro'>Welcome to My To-do App</h1>
+    <div id="firebaseui-auth-container"></div>
+
+  </body>
+
+</html>

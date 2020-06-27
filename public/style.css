@@ -20,6 +20,13 @@ ul, li{
 #todo-list-body h1{
   text-align: center;
   margin-top: 0;
+  /* margin-bottom:0; */
+  /* border: solid pink 2px; */
+}
+#noTodos{
+  text-align: center;
+  margin: 0;
+  margin-top: -1.5rem;
 }
 #todo-list-body::before{
   content: '';
@@ -159,9 +166,7 @@ button:active{
   opacity: 1;
 }
 
-/* @media only screen and (max-width: 500px){
-  body{
-    margin: 10px;
-    padding: 0;
-  }
-}  */
+#intro{
+  text-align: center;
+  margin: 4rem;
+}

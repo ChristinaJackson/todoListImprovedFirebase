@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <!-- <script data-main = "node_modules/dotenv/lib/main" src = "scripts/require.js"></script> -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>ToDo List</title>
 	<link href="https://fonts.googleapis.com/css?family=Neucha|Open+Sans&display=swap" rel="stylesheet">
 	<link href="style.css" rel="stylesheet" type="text/css" />
+	  <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
 </head>
+<!-- // Your web app's Firebase configuration -->
+	<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
 
 <body>
+	<button id='signOut'>Sign out</button>
 	<div id='todo-list-body'>
 		<div id="holes">
 			<div class="hole hole1">
@@ -24,18 +30,20 @@
 		</div>
 		<div id='todoTopper'>
 			<h1>To-do List</h1>
+			<!-- <p id='noTodos'>No to-do's, add some!</p> -->
 			<!-- added form for access and invis label for the todo input -->
-			<form id="todoInputForm">
+			<form id="todoInputForm" action='#'>
 				<label for='addTodoTextInput' class='visually-hidden'>Add a to-do item</label>
       <input type='text'id='addTodoTextInput' placeholder="Enter a todo" >
       <button type="submit">Add</button>
       <button class ='toggleAll'>Toggle All</button>
-    </form>
+	</form>
+
+	
     </div>
     <ul id='todo-list'>
-    </ul>
+	</ul>
   </div>
-
     <script src="script.js"></script>
   </body>
 </html>
