@@ -29,12 +29,12 @@ var firebaseConfig = {
   measurementId: "G-58V0BMSNB1"
 };
 
-// Initialize Firebase and database
-firebase.initializeApp(firebaseConfig);
+// // Initialize Firebase and database
+// firebase.initializeApp(firebaseConfig);
 
-
-window.onload = function () {
-  view.setUpEventListeners();
+window.addEventListener('load', function () {
+  // Initialize Firebase and database
+  firebase.initializeApp(firebaseConfig);
   firebase.auth().onAuthStateChanged(function (user) {
     if (user !== null) {
       let currentUser = user.uid;
@@ -45,7 +45,8 @@ window.onload = function () {
       window.location = 'loginpage.html'
     }
   })
-}
+  view.setUpEventListeners();
+});
 
 //displays previously stored todo items, if any
 async function getTodos(currentUser) {
@@ -134,7 +135,6 @@ var handlers = {
       todoList.deleteTodo(position);
       //clears the database if element deleted is last item on the list    
       database.remove()
-      noTodos.style.display = 'block'
     } else {
       todoList.deleteTodo(position);
     }

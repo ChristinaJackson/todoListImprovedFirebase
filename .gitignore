@@ -1,3 +1,7 @@
+.DS_Store
+.cache/
+dist
+.vscode/
 
 # Logs
 logs
@@ -64,3 +68,4 @@ node_modules/
 
 # dotenv environment variables file
 .env
+

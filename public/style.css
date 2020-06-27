@@ -170,3 +170,15 @@ button:active{
   text-align: center;
   margin: 4rem;
 }
+
+button#signOut{
+  padding: 10px 20px;
+  float: right;
+}
+#otherVersion{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#otherVersion a{
+  color: black;
+}
