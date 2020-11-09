@@ -41,6 +41,7 @@ window.addEventListener('load', function () {
       getTodos(currentUser);
       return database = firebase.database().ref(`${user.uid}`);
     } else {
+      console.log(user)
       window.location = 'loginpage.html'
     }
   })
